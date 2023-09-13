@@ -18,6 +18,7 @@ let
     lockfile = ./Gemfile.lock;
     gemset = ./gemset.nix;
     gemfileExtraFiles = [ ./.ruby-version ];
+    extraConfigPaths = [ "${./.}/.ruby-version" ];
   };
 in
 pkgs.mkShell {
